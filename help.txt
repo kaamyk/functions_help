@@ -3396,5 +3396,6 @@ Convertir les arguments nombre en int pour les cakcuker dans une fonction;
 fonction qui sera définit en parcourant une string avec tous le opérateurs et le rang de l’opé qui correspond correspond à un tableau d’addresse de fonctions qui sera assigner à un pointeur.
 
 BIEN PENSER À DÉBUGGER AU FUR ET À MESURE.
+Faire attention aux différentes règle sur les fichiers parce que les fonctions s remplissent vites et les fichiers aussi.
 
 
