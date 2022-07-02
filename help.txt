@@ -1,8 +1,45 @@
+J00 ex00:
+On envois un mal donc rien compliquer.
 
+J00 ex01 :
+chmod 457(random) fichier.ext
+
+J00 ex02 :
+même chose qu'au dessus.
+Pour faire les liens symboliques entre les fichiers => ln -s(ymbolique) fichier1 fichier2 
+le fichier 2 sera lié au 1 qui menera au code.
+Le lien symbolique est un raccourci qui mène au fihcier et non au binaire. Sinon c'est un lien physique.
 
 Pour exécuter un fichier .sh : MODIFIER LES DROITS
 grep affiche les fichiers ou répertoires qui correspondent à un pattern donné 
 awk permet d'effectuer une action. On peut mettre un mini bout de code.
+
+J00 ex 03 :
+Lesystème est sur wikipédia.
+Kerberos est une librairie qu'on trouve sur Github.
+Pour créer un ticket kerberos :   kinit login
+Pour détruire un ticket       :	kdestroy.
+
+J00 ex 06 :
+ldif est un format de fichier qui contiennent des infos répertoriées comme un dictionnaire.
+Il faut simplement se chercher dans les fichiers avec un ldapsearch pour retrouver ses infos.
+après, changetype :
+For example:
+
+dn:cn=Barbara Fritchy,ou=Sales,o=Oracle,c=US
+changetype:modify
+add: work-phone
+work-phone:510/506-7000
+work-phone:510/506-7001
+
+
+J00 ex 07 :
+ls -mpt
+m : virgules 
+p : met un / derriere les fichiers 
+t : ordonne par date de création
+
+https://docs.oracle.com/cd/A81042_01/DOC/network.816/a77230/syntax.html
 
 J01 Ex 1 :
 FT_USER = nvjksvn
