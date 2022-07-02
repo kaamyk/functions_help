@@ -3399,3 +3399,59 @@ BIEN PENSER À DÉBUGGER AU FUR ET À MESURE.
 Faire attention aux différentes règle sur les fichiers parce que les fonctions s remplissent vites et les fichiers aussi.
 
 
+
+J11 ex 00 :
+
+  1 #include "ft_list.h"
+  2 
+  3 t_list      *ft_create_elem(void *data)
+  4 {
+  5     t_list  *tmp;
+  6 
+  7     tmp = malloc(sizeof(t_list));
+  8 
+  9     if (tmp)
+ 10     {
+ 11         tmp->data = data;
+ 12         tmp->next = NULL;
+ 13     }
+ 14 
+ 15     return tmp;
+ 16 }
+~    
+
+On récupère le type de la structure via l'inclusion
+on créer une variable à partir de ça et on malloc la taille du type.
+Si tmp à une valeur (si l'allocutoion à marcher) On assigne les valeur aux pointeurs.
+
+
+J11 ex 01 :
+
+  1 #include "ft_list.h"
+  2 #include <stdlib.h>
+  3 void    ft_list_push_back(t_list **begin_list, void *data)
+  4 {
+  5     t_list      *list;
+  6 
+  7      list = *begin_list;
+  8     if (!list)
+  9         list = ft_create_elem(data);
+ 10     else if (list)
+ 11     {
+ 12         while ((list)->next)
+ 13         {
+ 14             list = list->next;
+ 15         }
+ 16         list->next = ft_create_elem(data);
+ 17     }
+ 18 }
+
+Intialisation d'une liste dans une autre fonction (paramètre **begin_list)
+Ici on récupère le le pointeur sur le pointeur de la structure pour modifier la structure directement (d'où le void)
+on initialise une variable de type structure. On lui donne une valeur égale à begin_list.
+Si la variable n'a pas de valeur alors on intite directement une structure avec la fonction.
+Si il y a une valeur on parcours les pointeurs des structres successives jusqu'à ne plus trouver de vaeur (NULL).
+On remplace alros le pointeur NULL par le pointeur de la nouvelle strucutre. dont le next vaut NULL.
+
+J11 ex 02 :
+
